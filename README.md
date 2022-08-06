@@ -21,3 +21,7 @@ Features:
 * Shutdown bias V at 54.9 Degree (you can set it)
 * Shows operator callsign on front display (change it inside Arduino code)
 * For touch band selection, band change memorize in eeprom, comes back same band after power on or reset.
+
+If you need any clarification or help look for me in qrz.com
+
+Enjoy, 73, S21RC
