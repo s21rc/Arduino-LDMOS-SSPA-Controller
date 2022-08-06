@@ -23,6 +23,7 @@
 #define band5 6
 #define band6 4
 #define band7 5
+#define antenna2 10 //Antenna 2 relay pin of arduino
 
 
 /* ======= Nextion Display ======== */
@@ -40,7 +41,7 @@ float temperature = 0.0;
 
 /* ======= PWM FAN ======== */
 const byte OC1A_PIN = 9;
-const byte OC1B_PIN = 10;
+//const byte OC1B_PIN = 10;
 const word PWM_FREQ_HZ = 31000; //Set currently to 31kHZ for Dalas 12V 4 wire Fan
 const word TCNT1_TOP = 16000000/(2*PWM_FREQ_HZ);
 
@@ -48,12 +49,14 @@ const word TCNT1_TOP = 16000000/(2*PWM_FREQ_HZ);
 
 /* ======== Other variable ======== */
 
+
 bool touch_status = false;
 bool PTT_status = false;
 bool error_i_status = false;
 bool error_swr_status = false;
 bool error_po_status = false;
 bool error_temp_status = false;
+bool antenna2_status = false;
 
 int graph_maxWatt = 600; //Scale from 0 to 600, set as per your SSPA
 int graph_maxTemp = 55; //Scale from 0 to 55
@@ -63,10 +66,12 @@ int band_pos =0;
 int temp_heatsink =0;
 int VdelayInMillis = 1000; // refresh V display every N mili sec
 
+
 unsigned long lastVRequest =0;
 
 int IdelayInMillis = 100; // refresh I display every N mili sec
 unsigned long lastIRequest =0;
+
 
 
 
@@ -463,6 +468,8 @@ void fanspeed(){
     
 }
 
+
+
 /* === Tempareturn Monitor  === */
 void read_temp(){
   if (millis() - lastTempRequest >= delayInMillis)
@@ -624,9 +631,27 @@ void trigger7(){
    band_position_touch();
   }
 
-void setup() {
-  myNex.begin();  // start Nextion Display 
+//Antenna2 switch
+void trigger8(){
+   if (antenna2_status == LOW){
+    digitalWrite(antenna2, HIGH);
+    myNex.writeNum("a1.val", 1); 
+    antenna2_status = HIGH;
+    } 
+   else {
+    digitalWrite(antenna2, LOW);
+    myNex.writeNum("a1.val", 0); 
+    antenna2_status = LOW;
+    }
+   
+  }
 
+  
+void setup() {
+  //delay (1000); //wait for display initialization
+  myNex.begin();  // start Nextion Display 
+  myNex.writeStr("op.txt", "A12BC"); //Write your callsign here
+ 
   /* === FAN PWM setup === */
   pinMode(OC1A_PIN, OUTPUT); //fan pwm
 
@@ -676,7 +701,6 @@ pinMode(VCC, INPUT);
 EEPROM.get(0, current_band); // Load last band position to current_band variable from memory location 0
 lpf_relay(current_band);
 display_band(current_band);
-
 }
 
 void loop() {
