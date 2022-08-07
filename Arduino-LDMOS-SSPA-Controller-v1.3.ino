@@ -26,7 +26,44 @@
 #define antenna2 10 //Antenna 2 relay pin of arduino
 
 
-/* ======= Nextion Display ======== */
+/* ======= Nextion Display ========
+
+Below are the variables inside the nextion HMI display
+Please see screenshot to understand better.
+
+a1 : Antenna 2 switch  (Dual state button)
+r1 : Rotary enable  (Dual state button/Touch Disabled)
+b1 : Band 1  (Dual state button)
+b2 : Band 2  (Dual state button)
+b3 : Band 3  (Dual state button)
+b4 : Band 4 (Dual state button)
+b5 : Band 5 (Dual state button)
+b6 : Band 6 (Dual state button)
+b7 : Band 7 (Dual state button)
+
+e1: On Air indicator (Dual state button/Touch Disabled)
+e2: Over current indicator (Dual state button/Touch Disabled)
+e3: High SWR indicator  (Dual state button/Touch Disabled)
+e4: High Tempo indicator (Dual state button/Touch Disabled)
+e5: Over power indicator (Dual state button/Touch Disabled)
+
+op: place to display owner callsign (Text, 7 char max)
+Cw: (Number)
+Cs: (Xfloat)
+Ct: (Number)
+
+Gw: watt bar (Progress bar)
+Gs: SWR bar (Progress bar)
+Gt: Temp bar (Progress bar)
+
+Cv: Voltage (Xfloat)
+Ca: Current (Xfloat)
+Cb: Current band (Number)
+Fs: Fan status (Text)
+*/
+
+
+
 EasyNex myNex(Serial);
 
 /* ======= Tempareture ======== */
