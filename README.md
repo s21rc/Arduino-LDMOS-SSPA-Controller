@@ -1,4 +1,9 @@
-# Arduino-LDMOS-SSPA-Controller-v1.3
+UPDATE V1.4
+Arduino-LDMOS-SSPA-Controller-v1.4.ino
+Pin assignment corrected for PCB V1.1
+
+V 1.3
+Arduino-LDMOS-SSPA-Controller-v1.3.ino
 Arduino LDMOS SSPA controller with Nextion HMI display
 
 Features:
