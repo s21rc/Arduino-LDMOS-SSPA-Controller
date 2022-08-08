@@ -1,0 +1,41 @@
+R1, R2: 1K
+R3-4: 10K
+R5-7: 10R
+R8: 4K7
+R9: optional/future function
+R10-12: 10K
+R13-19: 1K
+R21, 23, 25, 27, 29, 31, 33: 10K
+R20, 22, 24, 26, 28, 30, 32: 1K
+C1-3: 10uF/16V Electrolyte
+C4-5: 0.01uF ceramic
+IC1: 7805
+Q1-7: BC547
+Q8-14: BC557
+Q15: BC547 [optional, you can use it to drive relay for bias off.]
+D1-8: 1N4148/1N4001-7 or any general purposee diodes.
+Optocouplers: PC817
+VR RE, FW: 103 multiturn potentiometer
+VR Vm: use two resistor, 150K from VDD, 10K from Gnd (15:1 ratio or nearby, you need the value to put inside code, 1% tolarence is better)
+DC-DC buck module: LM2596HVS (Must be HVS, input voltage max 60v), !! ordinary LM2596 module will give you magic smoke. 
+[If you have separate 12V PSU, then no need to use the DC-DC Buck module] !! module is up side down. GND IN/OUT pins are at top of the PCB.
+
+Temp Sensor: DS18B20 (buy the 3 pin package, fix it inside a cable lug, put it in heatsink or over LDMOS)
+Band Switch: 8 pole rotary band switch, use position 1: GND, position 8: VCC 5V, use 7x 1K Resistor between each pole. 
+So it is a 8K resistor with different voltage in each tap. If you do not use Rotary switch, use a jumper to short the middle pin with gnd.
+Microcontroller: Ardiono Nano
+
+
+Header description:
+LPF(7): this will go to DXworld-e LPF board (or any LPF board where GND is common for relays)
+50V (2): goes to main VDD
+12v OUT (2): spare 12v out for running any other peripherals.
+PWM Fan (4): goes to 4 pin PWM. for 3 PIN PWM use the arduino digital pin 9, GND, PWM, Not used, 12V 
+UART(4): GND-TX-RX-5V (goes to GND-RX-TX-5V of Nextion display)
+ERR(4): GND, LED1, LED2, LED3 (connects to the LED + pin of the DXWPORLD_E protection board - after using this the LED will not work anymore)
+BAND (3): Input-5V-GND: goes to band switch assembly (please see schematic)
+TEMP (3): GND-DATA-5V goes to DS18B20 IC
+I(A) (2): GND-Data goes to current monitor pin of DXWORLD-E protection board
+PTT (2): GND-IN, IN connects to 12V line of DXWORLD-e RX/TX board. or connect to same point where 12V for BIAS is present when PTT.
+SWR1: GND-REF-FWD goes to SWR monitor of DXWORLD-E protection board or to SWR bridge. (You should use the POT to make sure not more than 5V is present in the arduino input.)
+AUX: for driving an relay, can be used to cut BIAS off or for doing any other thing (code need to modify)
