@@ -7,7 +7,7 @@ Arduino-LDMOS-SSPA-Controller-v1.3.ino
 Arduino LDMOS SSPA controller with Nextion HMI display
 
 ![Display variables](./nextion%20variables.PNG)
-![complete board](./pcb v1.1.png)
+![complete board](./pcb%20v1.1.png)
 
 Features:
 * Arduino Nano [easy code to understand]
