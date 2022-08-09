@@ -9,6 +9,8 @@ Arduino LDMOS SSPA controller with Nextion HMI display
 ![Display variables](./nextion%20variables.PNG)
 ![complete board](./pcb%20v1.1.png)
 
+![Display variables](./display_mock.PNG)
+
 Features:
 * Arduino Nano [easy code to understand]
 * Max watt, max SWR, Max Temp for Bar graph settings can be changed in Arduino code.
