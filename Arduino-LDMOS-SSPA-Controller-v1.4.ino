@@ -41,7 +41,7 @@ NOTE: V1.1 PCB has a small mistake, please swap pin A6 and A5 on the PCB by cutt
 #define band5 11
 #define band6 12
 #define band7 13
-//#define antenna2 10 //Antenna 2 relay pin of arduino
+#define antenna2 10 //Antenna 2 relay pin of arduino
 
 
 /* ======= Nextion Display ========
