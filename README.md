@@ -11,7 +11,10 @@ Hardware:
 3. Implimenting ALC features to feed to radio.
 
 ************************************
-UPDATE V1.4
+V 1.5
+Bug fixed. Touch disabled when TX.
+
+V 1.4
 Arduino-LDMOS-SSPA-Controller-v1.4.ino
 Pin assignment corrected for PCB V1.1
 
