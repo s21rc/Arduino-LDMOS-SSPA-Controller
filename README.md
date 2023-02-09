@@ -40,6 +40,6 @@ Features:
 * Shows operator callsign on front display (change it inside Arduino code)
 * For touch band selection, band change memorize in eeprom, comes back same band after power on or reset.
 
-If you need any clarification or help raise a "issues" here in GIT, or look for me in qrz.com for email.
+If you need any clarification or help raise a "issues" here in GIT, or drop me an email.
 
 Enjoy, 73, S21RC
