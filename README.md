@@ -1,16 +1,11 @@
 UPCOMING Task:
 
-Software:
-1. Settings page in GUI
-2. Compilation of Nextion 5 inch display graphics and code.
-3. Dark/Light theme selector.
 
-Hardware:
-1. Designing the PCB with SMD component to make it within 100x100mm (Most PCB fabricator has a good package rate for that size)
-2. Using line driver IC to release some GPIOs, Put a audio buzzer for warning tone,
-3. Implimenting ALC features to feed to radio.
 
-************************************
+TFT file for 5 inch display uploaded.
+![5 inch Display](./5%20inch%20v1.1.png)
+
+
 V 1.5
 Bug fixed. Touch disabled when TX.
 
