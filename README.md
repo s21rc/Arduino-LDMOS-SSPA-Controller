@@ -3,7 +3,7 @@ UPCOMING Task:
 
 
 TFT file for 5 inch display uploaded.
-![5 inch Display](./5%20inch%20v1.1.png)
+![5 inch Display](./5%20inch%20v1.1.PNG)
 
 
 V 1.5
