@@ -1,3 +1,5 @@
+OLD VERSION
+PLEASE TRY V2 CODES from: https://s21rc.net/s21rc-ldmos-sspa-controller-v2-0/
 
 TFT file for 5 inch display uploaded.
 ![5 inch Display](./5%20inch%20v1.1.PNG)
