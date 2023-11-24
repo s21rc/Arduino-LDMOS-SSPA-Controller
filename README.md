@@ -1,7 +1,14 @@
-!! OLD VERSION !!
+PLEASE TRY THE NEW VERSION OF THIS PROJECT:
 
-PLEASE TRY V2 CODES from: https://s21rc.net/s21rc-ldmos-sspa-controller-v2-0/
+SOFTWARE CODE (Arduino and Nextion files): 
+V2 CODES from: https://s21rc.net/s21rc-ldmos-sspa-controller-v2-0/
+or
+V2.1.x Lite from: https://github.com/s21rc/ldmos_sspa_controller_v2.1_lite
 
+PCB: 
+
+
+!! OLD VERSION - NO LONGER DEVELOPED!!
 TFT file for 5 inch display uploaded.
 ![5 inch Display](./5%20inch%20v1.1.PNG)
 
