@@ -5,10 +5,12 @@ V2 CODES from: https://s21rc.net/s21rc-ldmos-sspa-controller-v2-0/
 or
 V2.1.x Lite from: https://github.com/s21rc/ldmos_sspa_controller_v2.1_lite
 
-PCB: 
+PCB GERBER: s21rc_ldmos_controller_v1.6.zip
 
 
-!! OLD VERSION - NO LONGER DEVELOPED!!
+!! V1.x OLD VERSION - NO LONGER DEVELOPED!!
+
+
 TFT file for 5 inch display uploaded.
 ![5 inch Display](./5%20inch%20v1.1.PNG)
 
